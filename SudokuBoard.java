@@ -56,9 +56,9 @@ public class SudokuBoard {
    }
 
    public boolean validColumns {
-      for(int r = 0; r < board.length; r++) {
+      for(int c = 0; c < board[0].length; c++) {
          Set<Character> seen = new HashSet<Character>();
-         for(int c = 0; c < board[r].length; c++) {
+         for(int r = 0; r < board.length; r++) {
             char value = board[r][c];
             
          if(value != '.') {
