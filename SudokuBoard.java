@@ -71,6 +71,8 @@ public class SudokuBoard {
       }
       return true;
    }
+
+   
    private boolean checkMiniSquare() {
       for(int spot = 1; spot <= 9; spot++) {
          char[][] mini = miniSquare(spot);
@@ -81,7 +83,7 @@ public class SudokuBoard {
                if(value != '0') {
                   for(int r2 = 0; r2 < 3; r2++) {
                      for(int c2 = 0; c2 < 3; c2++) {
-                        if() {
+                        if(!(r == r2 && c == c2) && value == mini[r2][c2]) {
                            return false;
                         }
                      }
