@@ -92,12 +92,18 @@ public class SudokuBoard {
             char value = board[r][c];
 
             if(value >= '1' && value <= '9') {
-               if() {}
+               if(!counts.containsKey(value)) {
+                  counts.put(value, 1);
+               } else {
+                  counts.put(value, counts.get(value) + 1);
+               }
             }
          }
       }
       for(char num = '1'; num <= '9'; num++) {
-         
+         if(!counts.containsKey(num) || counts.get(num) != 9) {
+            return false;
+         }
       }
       return isValid();
    }
