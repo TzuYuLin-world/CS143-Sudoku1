@@ -71,7 +71,16 @@ public class SudokuBoard {
       }
       return true;
    }
-   private boolean checkMiniSquare() {}
+   private boolean checkMiniSquare() {
+      for(int spot = 1; spot <= 9; spot++) {
+         char[][] mini = miniSquare(spot);
+         for(int r = 0; r < 3; r++) {
+            for(int c = 0; c < 3; c++) {
+               
+            }
+         }
+      }
+   }
    
    
    private char[][] miniSquare(int spot) {
