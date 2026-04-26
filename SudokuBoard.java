@@ -90,9 +90,16 @@ public class SudokuBoard {
       for(int r = 0; r < board.length; r++;) {
          for(int c = 0; c < board[r].length; c++) {
             char value = board[r][c];
+
+            if(value >= '1' && value <= '9') {
+               if() {}
+            }
          }
       }
-      return false;
+      for(char num = '1'; num <= '9'; num++) {
+         
+      }
+      return isValid();
    }
    
    public String toString() {
