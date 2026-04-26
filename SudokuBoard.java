@@ -19,7 +19,8 @@ public class SudokuBoard {
    
    }
 
-   
+   public boolean isValid() {}
+   public boolean isSolved() {}
    
    public String toString() {
       String result = "";
