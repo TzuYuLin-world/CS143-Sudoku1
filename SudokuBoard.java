@@ -30,7 +30,7 @@ public class SudokuBoard {
          for(int c = 0; c < board[r].length; c++) {
             char value = board[r][c];
 
-            if() {
+            if(!(value >= '1' && value <= '9') && value != '0') {
                return false;
             }
          }
