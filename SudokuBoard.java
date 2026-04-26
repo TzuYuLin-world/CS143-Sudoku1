@@ -22,7 +22,15 @@ public class SudokuBoard {
    public boolean isValid() {
       return checkData() && checkRow() && checkCol() && miniSquare();
    }
-   
+
+
+   public boolean validRows{
+      return true;
+   }
+
+   public boolean validColumns {
+      return true;
+   }
    private int[][] miniSquare(int spot) {
       int[][] mini = new int[3][3];
       for(int r = 0; r < 3; r++) {
