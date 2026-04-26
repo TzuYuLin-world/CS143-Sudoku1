@@ -27,9 +27,15 @@ public class SudokuBoard {
 
    public boolean checkData() {
       for(int r = 0; r < board.length; r++) {
-         for(int c = 0; c < board[r].length; c++) {}
+         for(int c = 0; c < board[r].length; c++) {
+            char value = board[r][c];
+
+            if() {
+               return false;
+            }
+         }
       }
-      
+      return true;
    }
 
    public boolean validRows{
