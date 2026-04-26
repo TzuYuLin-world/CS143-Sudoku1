@@ -56,8 +56,22 @@ public class SudokuBoard {
    }
 
    public boolean validColumns {
+      for(int r = 0; r < board.length; r++) {
+         Set<Character> seen = new HashSet<Character>();
+         for(int c = 0; c < board[r].length; c++) {
+            char value = board[r][c];
+            
+         if(value != '.') {
+            if(seen.contains(value)) {
+            return false;
+            }
+         seen.add(value);
+         }
+         }   
+      }
       return true;
    }
+   
    private int[][] miniSquare(int spot) {
       int[][] mini = new int[3][3];
       for(int r = 0; r < 3; r++) {
