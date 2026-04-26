@@ -39,6 +39,19 @@ public class SudokuBoard {
    }
 
    public boolean validRows{
+      for(int r = 0; r < board.length; r++) {
+         Set<Character> seen = new HashSet<Character>();
+         for(int c = 0; c < board[r].length; c++) {
+            char value = board[r][c];
+
+            if(value != '.') {
+               if(seen.contains(value)){
+                  return false;
+               }
+               seen.add(value);
+            }
+         }
+      }
       return true;
    }
 
