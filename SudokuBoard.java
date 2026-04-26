@@ -9,11 +9,11 @@ public class SudokuBoard {
       board = new char[9][9];
       Scanner input = new Scanner(new File(filename));
       
-      for(int row = 0; row < board.length; row++) {
+      for(int r = 0; r < board.length; r++) {
          String line = input.nextLine();
          
-         for(int col = 0; col < board[row].length; col++) {
-            board[row][col] = line.charAt(col);
+         for(int c = 0; c < board[r].length; c++) {
+            board[r][c] = line.charAt(c);
          }
       }
    
@@ -41,16 +41,16 @@ public class SudokuBoard {
    public String toString() {
       String result = "";
       
-      for(int row = 0; row < board.length; row++) {
-         if(row % 3 == 0 && row != 0) {
+      for(int r = 0; r < board.length; r++) {
+         if(r % 3 == 0 && r != 0) {
             result += " ------.-------.------\n";
          }
          
-         for(int col = 0; col < board[row].length; col++) {
-            if(col % 3 == 0 && col != 0) {
+         for(int c = 0; c < board[r].length; c++) {
+            if(c % 3 == 0 && c != 0) {
                result += "| ";
             }
-            result += board[row][col] + " ";
+            result += board[r][c] + " ";
          
          }
          result += "\n";
