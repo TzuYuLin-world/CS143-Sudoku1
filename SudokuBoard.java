@@ -86,6 +86,12 @@ public class SudokuBoard {
    }
    
    public boolean isSolved() {
+      Map<> counts = new HashMap<>();
+      for(int r = 0; r < board.length; r++;) {
+         for(int c = 0; c < board[r].length; c++) {
+            char value = board[r][c];
+         }
+      }
       return false;
    }
    
