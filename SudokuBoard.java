@@ -22,7 +22,7 @@ public class SudokuBoard {
    
    
    public boolean isValid() {
-      return checkData() && checkRow() && checkCol() && miniSquare();
+      return checkData() && checkRow() && checkCol() && checkMiniSquare();
    }
 
    private boolean checkData() {
@@ -71,6 +71,8 @@ public class SudokuBoard {
       }
       return true;
    }
+   private boolean checkMiniSquare() {}
+   
    
    private char[][] miniSquare(int spot) {
       char[][] mini = new char[3][3];
