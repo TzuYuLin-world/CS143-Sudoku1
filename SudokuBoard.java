@@ -19,10 +19,13 @@ public class SudokuBoard {
    
    }
 
+   
+   
    public boolean isValid() {
       return checkData() && checkRow() && checkCol() && miniSquare();
    }
 
+   public boolean checkData() {}
 
    public boolean validRows{
       return true;
