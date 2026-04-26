@@ -80,7 +80,7 @@ public class SudokuBoard {
             
             for(int c = 0; c < 3; c++) {
                char value = mini[r][c];
-               if(value != '0') {
+               if(value != '.') {
                   for(int r2 = 0; r2 < 3; r2++) {
                      for(int c2 = 0; c2 < 3; c2++) {
                         if(!(r == r2 && c == c2) && value == mini[r2][c2]) {
@@ -93,6 +93,7 @@ public class SudokuBoard {
             }
          }
       }
+      return true;
    }
    
    
