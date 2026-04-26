@@ -38,7 +38,7 @@ public class SudokuBoard {
       return true;
    }
 
-   public boolean validRows{
+   public boolean checkRows{
       for(int r = 0; r < board.length; r++) {
          Set<Character> seen = new HashSet<Character>();
          for(int c = 0; c < board[r].length; c++) {
@@ -55,7 +55,7 @@ public class SudokuBoard {
       return true;
    }
 
-   public boolean validColumns {
+   public boolean checkColumns {
       for(int c = 0; c < board[0].length; c++) {
          Set<Character> seen = new HashSet<Character>();
          for(int r = 0; r < board.length; r++) {
