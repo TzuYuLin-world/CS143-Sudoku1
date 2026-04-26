@@ -75,8 +75,19 @@ public class SudokuBoard {
       for(int spot = 1; spot <= 9; spot++) {
          char[][] mini = miniSquare(spot);
          for(int r = 0; r < 3; r++) {
+            
             for(int c = 0; c < 3; c++) {
-               
+               char value = mini[r][c];
+               if(value != '0') {
+                  for(int r2 = 0; r2 < 3; r2++) {
+                     for(int c2 = 0; c2 < 3; c2++) {
+                        if() {
+                           return false;
+                        }
+                     }
+                  }
+               }
+
             }
          }
       }
