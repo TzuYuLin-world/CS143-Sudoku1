@@ -72,8 +72,8 @@ public class SudokuBoard {
       return true;
    }
    
-   private int[][] miniSquare(int spot) {
-      int[][] mini = new int[3][3];
+   private char[][] miniSquare(int spot) {
+      char[][] mini = new char[3][3];
       for(int r = 0; r < 3; r++) {
          for(int c = 0; c < 3; c++) {
             // whoa - wild! This took me a solid hour to figure out (at least)
