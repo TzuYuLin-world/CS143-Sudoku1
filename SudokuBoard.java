@@ -5,19 +5,27 @@ public class SudokuBoard {
 
    private char[][] board;
    
-   public SudokuBoard(String filename) throws FileNotFoundException {
+   public SudokuBoard(String filename) {
       board = new char[9][9];
-      Scanner input = new Scanner(new File(filename));
-      
-      for(int r = 0; r < board.length; r++) {
-         String line = input.nextLine();
-         
-         for(int c = 0; c < board[r].length; c++) {
-            board[r][c] = line.charAt(c);
-         }
+      try {
+        Scanner input = new Scanner(new File(filename));
+
+        for (int r = 0; r < board.length; r++) {
+            String line = input.nextLine();
+
+            for (int c = 0; c < board[r].length; c++) {
+                board[r][c] = line.charAt(c);
+            }
+        }
+
+        input.close();
+
+      } catch (FileNotFoundException e) {
+         System.out.println("File not found: " + filename);
       }
-   
+         
    }
+
 
    
    
