@@ -25,7 +25,7 @@ public class SudokuBoard {
       return checkData() && checkRow() && checkCol() && miniSquare();
    }
 
-   public boolean checkData() {
+   private boolean checkData() {
       for(int r = 0; r < board.length; r++) {
          for(int c = 0; c < board[r].length; c++) {
             char value = board[r][c];
@@ -38,7 +38,7 @@ public class SudokuBoard {
       return true;
    }
 
-   public boolean checkRow() {
+   private boolean checkRow() {
       for(int r = 0; r < board.length; r++) {
          Set<Character> seen = new HashSet<Character>();
          for(int c = 0; c < board[r].length; c++) {
@@ -55,7 +55,7 @@ public class SudokuBoard {
       return true;
    }
 
-   public boolean checkCol() {
+   private boolean checkCol() {
       for(int c = 0; c < board[0].length; c++) {
          Set<Character> seen = new HashSet<Character>();
          for(int r = 0; r < board.length; r++) {
