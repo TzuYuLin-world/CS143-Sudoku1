@@ -12,12 +12,14 @@ public class SudokuBoard {
       for(int row = 0; row < board.length; row++) {
          String line = input.nextLine();
          
-         for(int col = 0; col < board[r].length; col++) {
+         for(int col = 0; col < board[row].length; col++) {
             board[row][col] = line.charAt(col);
          }
       }
    
    }
+
+   
    
    public String toString() {
       String result = "";
@@ -27,7 +29,7 @@ public class SudokuBoard {
             result += " ------.-------.------\n";
          }
          
-         for(int col = 0; col < board[r].length; col++) {
+         for(int col = 0; col < board[row].length; col++) {
             if(col % 3 == 0 && col != 0) {
                result += "| ";
             }
